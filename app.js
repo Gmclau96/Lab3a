@@ -43,7 +43,7 @@ app.post('/view', function (req, res) {
                     res.send("Errorencoutered while displaying");
                     return console.error(err.message);
                 }
-                res.send(' ID: ${row.ID},   Name: ${row.NAME}');
+                res.send(` ID: ${row.ID}, Name: ${row.NAME}`);
                 console.log("Entry displayed successfully");
             });
     });
@@ -80,7 +80,7 @@ app.post('/delete', function (req, res) {
 
 
 
-
+//CLOSE DATABASE CONNECTION
 app.get('/close', function (req, res) {
     db.close((err) => {
         if (err) {
@@ -92,6 +92,6 @@ app.get('/close', function (req, res) {
     });
 });
 
-app.listen(3000,()=>{
+app.listen(3000, () => {
     console.log("server listening on port: 3000");
 });
