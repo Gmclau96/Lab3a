@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title> Relational Database Example</title>
+    <link href="https://cdn.jsdeliver.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Employee Database</h1>
+    </header>
+    <div class="row row-cols-2">
+        <div class="mb-5">
+            <div class="card bg-light border-0 h-100">
+                <div class="card-body text-center p-4 plg pt-0 pt-lg-0">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                        <i class="bi bi-plus-square-fill"></i>
+                    </div>
+                    <h2 class="fs-4 fw-bold">Add New Employee</h2>
+                    <form action="/add" method="POST">
+                        <fieldset>
+                            <div class="mb-3">
+                                <label>Employee ID</label>
+                                <input type="text" id='empID' name="id" required>
+                            </div>
+                            <div class="mb-3">
+                                <label>Name</label>
+                                <input type="text" id='name' name="name" required>
+                            </div>
+                            <button type="reset">Reset</button>
+                            <button type="submit">Submit</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <div class="card bg-light border-0 h-100">
+                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                        <i class="bi bi-filter-square-fill"></i>
+                    </div>
+                    <h2 class="fs-4 fw-bold">View an Employee</h2>
+                    <form action="/view" method="POST">
+                        <fieldset>
+                            <div class="mb-3">
+                                <label>Employee ID</label>
+                                <input type="text" id="empID" name="id" required>
+                                <br /><br /><br /><br />
+                            </div>
+                            <div class="mb-3">
+                                <button type="reset">Reset</button>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <div class="card bg-light border-0 h-100">
+                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                        <i class="bi bi-cloud-upload-fill"></i>
+                    </div>
+                    <h2 class="fs-4 fw-bold">Update an Employee</h2>
+                    <form action="/update" method="POST">
+                        <fieldset>
+                            <div class="mb-3">
+                                <label>Employee ID</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label>New Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <button type="reset">Reset</button>
+                            <button type="submit">Submit</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <div class="card bg-light border-0 h-100">
+                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                        <i class="bi bi-dash-square-fill"></i>
+                    </div>
+                    <h2 class="fs-4 fw-bold">Delete an Employee</h2>
+                    <form action="/delete" method="POST">
+                        <fieldset>
+                            <div class="mb-3">
+                                <label>Employee ID</label>
+                                <input type="text" id="empID" name="id" required>
+                                <br><br>
+                            </div>
+                            <button type="reset">Reset</button>
+                            <button type="submit">Submit</button>
+                            <br /><br /><br />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-5 bg-dark text-center">
+        <p style="color: white;">Please enter 'http://localhost:3000/close' to close the database connection before
+            closing this window</p>
+    </footer>
+
+</body>
+
+</html>
