@@ -43,7 +43,7 @@ app.post('/view', function (req, res) {
                     res.send("Errorencoutered while displaying");
                     return console.error(err.message);
                 }
-                res.send(' ID: ${row.ID}, Name: ${row.NAME}');
+                res.send(' ID: ${row.ID},   Name: ${row.NAME}');
                 console.log("Entry displayed successfully");
             });
     });
@@ -52,7 +52,7 @@ app.post('/view', function (req, res) {
 //UPDATE
 app.post('/update', function (req, res) {
     db.serialize(() => {
-        db.run('UPDATE emp SET name = ? WEHERE id = ?', [req.body.name, reqbody.id],
+        db.run('UPDATE emp SET name = ? WEHERE id = ?', [req.body.name, req.body.id],
             function (err) {
                 if (err) {
                     res.send("Error encounteredf while updating");
